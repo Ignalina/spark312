@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        sh '''export MAVEN_OPTS="-Xss4096m -Xmx28g -XX:ReservedCodeCacheSize=3g"
+        sh '''export MAVEN_OPTS="-Xss256m -Xmx20g -XX:ReservedCodeCacheSize=2g"
 
 ./dev/make-distribution.sh --name iganlina-spark --pip --tgz -Dhadoop.version=3.3.1 -DskipTests
 '''
