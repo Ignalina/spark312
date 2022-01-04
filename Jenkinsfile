@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh '''export MAVEN_OPTS="-Xss256m -Xmx25g -XX:ReservedCodeCacheSize=2g"
 
-./dev/make-distribution.sh --name iganlina-spark --pip --tgz -Dhadoop.version=3.3.1 -DskipTests
+./dev/make-distribution.sh --name ignalina-spark --pip --tgz -Dhadoop.version=3.3.1 -DskipTests
 '''
       }
     }
